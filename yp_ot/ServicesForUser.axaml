@@ -1,0 +1,65 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="950" d:DesignHeight="500"
+        x:Class="yp_ot.ServicesForUser"
+        Title="ServicesForUser" Width="950" Height="500">
+    <Grid>
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Margin = "10 10 0 0" FontSize = "20" FontWeight="Bold">Ассортимент Услуг</TextBlock>
+            <TextBlock Margin = "159 10 0 0" FontSize = "20" FontWeight="Bold">Сортировка</TextBlock>
+            <TextBlock Margin = "50 10 0 0" FontSize = "20" FontWeight="Bold">Услуга</TextBlock>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center" Margin = "10 10 0 0"> Поиск по названию услуги: </TextBlock>
+            <TextBox Name="ServSearch" Width="150" Margin ="5 10 0 0" TextChanged="SearchService"></TextBox>
+            <StackPanel Margin="10 12 00 0">
+                <Button Background= "Orange"  Content="Максимум стоимости" Click="SortDescending" Width="170"></Button>
+            </StackPanel>
+            <StackPanel  Margin=" 10 12 0 0">
+                <Button Background= "Orange"  Name="Rec" Content="Записаться" Click="Recd"></Button>
+            </StackPanel>
+            <StackPanel  Margin=" 10 12 0 0">
+                <Button Background= "Orange"  Name="back" Content="Вернутся" Click="Main"></Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center"
+                       x:Name="FilterDiscont" Margin ="10 10 0 0">Фильтрация по скидке: </TextBlock>
+            <ComboBox Name="DiscontComboBox" 
+                      x:CompileBindings="False"
+                      SelectionChanged="DiscountFilter" Width="150" Margin ="35 10 0 0">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding }" TextAlignment="Center"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <StackPanel Margin="10 12 00 0">
+                <Button Background= "Orange"  Content="Минимум стоимости" Click="SortAscending" Width="170" ></Button>
+            </StackPanel>
+        </StackPanel>
+                <StackPanel Orientation="Vertical">
+                <DataGrid Name="DataGrid" x:CompileBindings="False" Margin ="10 20 0 0" Height="350" IsReadOnly="True" ItemsSource="{Binding Items}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Название" Binding="{Binding Название}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Стоимость" Binding="{Binding Стоимость}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Продолжительность" Binding="{Binding Продолжительность}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Скидка" Binding="{Binding Скидка}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Цена со скидкой" Binding="{Binding Цена_со_скидкой}"></DataGridTextColumn>
+                            <DataGridTemplateColumn Header="Изображение">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding Изображение}" Height="100" Width="100" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </StackPanel>
+    </Grid>
+</Window>

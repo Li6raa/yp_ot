@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="yp_ot/AddServices.axaml" value="yp_ot/yp_ot.csproj" />
+        <entry key="yp_ot/App.axaml" value="yp_ot/yp_ot.csproj" />
+        <entry key="yp_ot/MainWindow.axaml" value="yp_ot/yp_ot.csproj" />
+        <entry key="yp_ot/RecordUser.axaml" value="yp_ot/yp_ot.csproj" />
+        <entry key="yp_ot/Services.axaml" value="yp_ot/yp_ot.csproj" />
+        <entry key="yp_ot/ServicesForUser.axaml" value="yp_ot/yp_ot.csproj" />
+        <entry key="yp_ot/authorization.axaml" value="yp_ot/yp_ot.csproj" />
+        <entry key="yp_ot/main_admin.axaml" value="yp_ot/yp_ot.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

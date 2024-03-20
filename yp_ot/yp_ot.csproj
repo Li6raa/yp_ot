@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.6" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.6"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.6"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.6"/>
+        <PackageReference Include="MySql.Data" Version="8.3.0" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <None Remove="фото_услуг\diz.jpg" />
+      <AvaloniaResource Include="фото_услуг\diz.jpg" />
+      <None Remove="фото_услуг\rulevoe-upravlenie-avtomobilya.jpg" />
+      <AvaloniaResource Include="фото_услуг\rulevoe-upravlenie-avtomobilya.jpg" />
+      <None Remove="фото_услуг\transmission.jpg" />
+      <AvaloniaResource Include="фото_услуг\transmission.jpg" />
+      <None Remove="фото_услуг\АКПП.jpg" />
+      <AvaloniaResource Include="фото_услуг\АКПП.jpg" />
+      <None Remove="фото_услуг\Вариатор.jpg" />
+      <AvaloniaResource Include="фото_услуг\Вариатор.jpg" />
+      <None Remove="фото_услуг\Выхлопная система.jpg" />
+      <AvaloniaResource Include="фото_услуг\Выхлопная система.jpg" />
+      <None Remove="фото_услуг\ГУР.png" />
+      <AvaloniaResource Include="фото_услуг\ГУР.png" />
+      <None Remove="фото_услуг\Двигатель.png" />
+      <AvaloniaResource Include="фото_услуг\Двигатель.png" />
+      <None Remove="фото_услуг\Дополнительные услуги.png" />
+      <AvaloniaResource Include="фото_услуг\Дополнительные услуги.png" />
+      <None Remove="фото_услуг\Кондиционер.jpg" />
+      <AvaloniaResource Include="фото_услуг\Кондиционер.jpg" />
+      <None Remove="фото_услуг\КПП.png" />
+      <AvaloniaResource Include="фото_услуг\КПП.png" />
+      <None Remove="фото_услуг\Подвеска.png" />
+      <AvaloniaResource Include="фото_услуг\Подвеска.png" />
+      <None Remove="фото_услуг\Сцепление.jpg" />
+      <AvaloniaResource Include="фото_услуг\Сцепление.jpg" />
+      <None Remove="фото_услуг\Техническое обслуживание.png" />
+      <AvaloniaResource Include="фото_услуг\Техническое обслуживание.png" />
+      <None Remove="фото_услуг\Топливная система.png" />
+      <AvaloniaResource Include="фото_услуг\Топливная система.png" />
+      <None Remove="фото_услуг\Шиномонтаж.jpg" />
+      <AvaloniaResource Include="фото_услуг\Шиномонтаж.jpg" />
+      <None Remove="фото_услуг\Электрика.png" />
+      <AvaloniaResource Include="фото_услуг\Электрика.png" />
+    </ItemGroup>
+</Project>
